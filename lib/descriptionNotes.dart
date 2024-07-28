@@ -40,10 +40,11 @@ class DescriptionNote extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Dismissible(
+    return /*Dismissible(
       key: ValueKey(id),
       direction: DismissDirection.endToStart,
       onDismissed: (direction){
+
         deleteData!(id);
         // ScaffoldMessenger.of(context).showSnackBar(
         //   SnackBar(content: Text('$title deleted')),
@@ -59,7 +60,7 @@ class DescriptionNote extends StatelessWidget {
             color: Colors.white
         ),
       ),
-      child: Padding(
+      child:*/ Padding(
           padding: const EdgeInsets.all(6.0),
         child: GestureDetector(
           onTap: (){
@@ -133,21 +134,21 @@ class DescriptionNote extends StatelessWidget {
                       ),
                   ],
                 ),
-                // Center(
-                //   child: IconButton(
-                //     onPressed: () => deleteData!(id),
-                //     icon: Icon(
-                //       Icons.delete_forever_rounded,
-                //       size: 40,
-                //       color: Colors.grey.shade800,
-                //     ),
-                //   ),
-                // )
+                Center(
+                  child: IconButton(
+                    onPressed: () => deleteData!(id),
+                    icon: Icon(
+                      Icons.delete_forever_rounded,
+                      size: 60,
+                      color: Colors.grey.shade800,
+                    ),
+                  ),
+                )
               ],
             ),
             ),
           ),
-        ),
+        // ),
     );
   }
 }
